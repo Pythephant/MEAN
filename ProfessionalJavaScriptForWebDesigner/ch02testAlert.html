@@ -5,13 +5,20 @@
 </head>
 <body>
 	<script type="text/javascript">
-		function alertArg(num){
-			num += 5;
-			alert(num);
+		function changeColor(){
+			function swapColors(){
+				var tempColor = anotherColor;
+				anotherColor = color;
+				color = tempColor;
+				alert('in swapColors, color: '+ color+',tempColor: '+tempColor+' ,anotherColor:'+anotherColor);
+			}
+			var anotherColor = 'red';
+			swapColors();
+			alert('in changeColor, color:' + color +' , anotherColor: '+anotherColor);
 		}
-		var a = 10;
-		alertArg(a);
-		alert(a);
+		var color = 'blue';
+		changeColor();
+		alert('in global, color:' + color);
 	</script>
 	<p></p>
 </body>

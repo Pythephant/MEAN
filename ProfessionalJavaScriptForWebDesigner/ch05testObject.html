@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// var person = {
+		// 	name : "Jason",
+		// 	age : 25,
+		// 	5 : true
+		// };
+		// alert(person.name);
+		// alert(person["5"]);
+		// alert(person['age']);
+
+		//test Objext as argument of function
+		// function displayInfo(args){
+		// 	var output = "";
+		// 	if(typeof args.name == "string"){
+		// 		output += "Name:" + args.name + "\n";
+		// 	}
+		// 	if (typeof args.age == "number"){
+		// 		output += "Age:" + args.age + "\n";
+		// 	}
+
+		// 	alert(output);
+		// }
+		// displayInfo({
+		// 	name : "Jason",
+		// 	age : 5
+		// })
+		// displayInfo({
+		// 	name : "Canddi"
+		// })
+
+		// displayInfo({
+		// 	otherArg : 'lalala',
+		// 	age : "5"
+		// })
+
+		//test Array
+		// var colors = ["red", "green", 'blue'];
+		// var names = new Array("Greg");
+		// // alert("colors length:" + colors.toString());
+		// // alert("names length:"+ names.length);
+		// // alert(typeof colors[0])
+		// alert(colors.toString())
+		// colors.length = 2;
+		// alert(colors.toString());
+
+		// //test add item to index more than array length
+		// var colors = ['red', 'green'];
+		// // alert(colors.toString());
+		// colors[10] = 'blue';
+		// // alert(colors.toString());
+		// alert(typeof colors);
+		// alert(colors instanceof Array)
+		// alert(Array.isArray(colors));
+		// alert(  Array.isArray(colors[10]))
+
+		//test Array toString, valueOf
+		// var colors = ['red', 'green', 'blue'];
+		// alert(colors.toString())
+		// alert(colors.valueOf())
+		// alert(colors);
+		
+		//Test toString and toLocaleString
+		// toString in the alert object and the object.toString
+		// toLocaleString will find the toLocaleString first if not find then find the toString
+		// var person1 = {
+		// 	toLocaleString : function() {
+		// 		return 'toLocaleString person1';
+		// 	}
+		// 	,
+		// 	toString : function() {
+		// 		return 'toString person1';
+		// 	}
+		// };
+
+		// var person2 = {
+		// 	toString : function(){
+		// 		return 'toString person2';
+		// 	}
+		// };
+
+		// var people = [person1, person2]
+		// alert(people)
+		// alert(people.toString())
+		// alert(people.toLocaleString())
+
+		//Join method of Array
+		// var colors = ['red'];
+		// colors[5] = 'blue';
+		// alert(colors)
+		// alert(colors.join('_'))
+
+		//Array push , pop, shift, unshift operation
+		//unshift method will inArrayt the last item of the arguments unshfit(first, ..., last); and will return the length of the array after unshift
+		// function alertArray(){
+		// 	alert(rtn);
+		// 	alert(intNum);
+		// }
+		// var intNum = new Array();
+		// var rtn = intNum.push(1,2);
+		// // alert(rtn);
+		// // alert(intNum);
+		// rtn = intNum.pop();
+		// // alertArray();
+		// rtn = intNum.unshift(4,5);
+		// // alertArray()
+		// rtn = intNum.push(7,8);
+		// // alertArray();
+		// rtn = intNum.shift();
+		// // alertArray();
+		// function compare(value1, value2){
+		// 	return value1 - value2;
+		// }
+		// alert(intNum);
+		// intNum.reverse();
+		// alert(intNum);
+		// intNum.sort(compare);
+		// alert(intNum);
+		// intNum.reverse();
+		// alert(intNum);
+
+		//Test of Slice method
+		// var colors = ['red', 'blue', 'green', 'purple'];
+		// var color1 = colors.slice(1);
+		// alert(colors);
+		// var color2 = colors.slice(1,2);
+		// alert(colors);
+		// alert(color1);
+		// alert(color2);
+		// color1[0] = 'xxx';
+		// alert(color1);
+		// alert(colors);
+
+		//Test splice
+		// var colors = ['red', 'blue', 'green'];
+		// var removed = colors.splice(0,1);
+		// alert(colors);
+		// alert(removed);
+
+		// removed = colors.splice(1,0,'yellow','orange');
+		// alert(colors);
+		// alert(removed);
+
+		// removed = colors.splice(1,1, 'red', 'purple');
+		// alert(colors);
+		// alert(removed);
+		
+		//every : one item return false then break, and return false
+		// var nums = [1,2,3,4,5,3,2,1];
+		// var everyResult = nums.every(function(item, index,array){
+		// 	alert(item + ',' + index);
+		// 	return (item<=20);
+		// });
+		// alert(everyResult);
+
+		//some: like or in the if
+		// 
+		// var someResult = nums.some(function(item, index, array){
+		// 	alert(item + ' at ' + index);
+		// 	return (item>30);
+		// });
+		// alert(someResult);
+
+
+		// filter: return the item in the array which is true
+		// var nums = [1,2,3,4,5,3,2,1];
+		// var filterResult = nums.filter(function(item, index, array){
+		// 	alert(item + ' at ' + index);
+		// 	return (item%2 == 1);
+		// });
+		// alert(filterResult);
+
+		
+		var nums = [1,2,3,4,5,3,2,1];
+		// function multiplyByTwo(item, index, array) {
+		// 	alert(item + ' at ' + index);
+		// 	array[index] *= 2;
+		// }
+
+		// // map: use the function to each item and return the result array;
+		// // var mapResult = nums.map(multiplyByTwo);
+		// // alert(mapResult);
+
+		// // forEach:
+		// var forEachResult = nums.forEach(multiplyByTwo);
+		// alert("reuslt:" + forEachResult);
+		// alert("self:" + nums);
+
+
+		//test reduce : 
+		// function sumUp(prev, cur, index ,array){
+		// 	alert(prev + ',' + cur + ',' + index + '.' );
+		// 	return prev + cur;
+		// }
+
+		// var sum = nums.reduceRight(sumUp);
+		// alert("the sum of the reduce:" + sum);
+
+	</script>
+</body>
+</html>
